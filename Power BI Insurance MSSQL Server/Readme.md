@@ -1,76 +1,95 @@
-
-🌾 Agriculture Climate & Yield Analytics
-A cloud-based end-to-end analytics pipeline built to help agricultural stakeholders understand how climate variables — rainfall, temperature, and humidity — impact crop yield across regions and seasons.
+🛡️ Prism Insurance BI & Sentiment Analysis
+An end-to-end Business Intelligence solution for an insurance reporting use case — combining executive KPI dashboards, role-based data governance, and customer sentiment analysis into a single Power BI platform.
 
 
 📌 Problem Statement
-Agricultural planning is often reactive rather than data-driven. Farmers, policymakers, and agri-businesses lack a centralized, visual tool to understand how shifting climate patterns directly affect crop output. This project addresses that gap by building a scalable cloud analytics solution that connects raw climate data to yield outcomes.
+Insurance companies deal with large volumes of claims data, regional performance metrics, and customer feedback — often managed in disconnected systems. Decision-makers lack a unified, secure dashboard that shows both operational KPIs and customer satisfaction trends in real time. This project builds that solution using on-premises SQL Server as the data source and Power BI as the reporting layer.
 
 
 🎯 Business Objective
-Identify which climate variables have the highest correlation with crop yield
-Enable regional comparison of yield performance across seasons
-Support data-driven planning for crop selection, irrigation, and risk assessment
+Give regional managers a real-time view of claims exposure and performance KPIs by segment
+Enforce data governance so each user only sees data relevant to their role (RLS)
+Surface customer sentiment trends to help the CX team prioritize complaint resolution
 
 
 🛠️ Tech Stack
 Layer
 Tools Used
-Cloud Storage
-AWS S3
-Data Warehouse
-Snowflake
-Access Control
-IAM Roles
-Data Wrangling
-SQL (Snowflake), Feature Engineering
-Visualization
-Power BI (DAX, Power Query)
-Connectivity
-Power BI Live Connection to Snowflake
+Data Source
+SQL Server (on-premises)
+Data Transformation
+Power Query (M Language)
+Data Modeling & Measures
+DAX (calculated columns, measures, KPIs)
+Security
+Row-Level Security (RLS)
+Deployment
+Power BI Service, On-premises Data Gateway
+Refresh
+Scheduled Data Refresh (gateway-backed)
+Text Analytics
+Sentiment Analysis via Power Query Editor
 
 
 
-🏗️ Architecture
-Raw Data → AWS S3 → Snowflake (via IAM) → SQL Wrangling → Power BI Dashboards
+🏗️ BI Pipeline
+SQL Server (On-Premises) → Power Query Transformations → Data Model (DAX) → Power BI Dashboard → Power BI Service (RLS + Scheduled Refresh)
 
-Ingestion — Raw agriculture datasets loaded into AWS S3 buckets
-Integration — Snowflake connected to S3 via IAM-secured external stage
-Transformation — SQL-based data wrangling, feature engineering, and categorical encoding in Snowflake
-Modeling — Clean, analysis-ready data model linking climate variables to yield outcomes
-Visualization — Live Power BI connection to Snowflake; 4 interactive dashboards built
+Ingestion — Connected on-premises SQL Server to Power BI via Data Gateway
+Transformation — Power Query used for data shaping, type casting, and null handling
+Modeling — Star schema data model with DAX measures for KPIs and trend analysis
+Security — RLS roles defined in Power BI Desktop, validated post-deployment in Service
+Sentiment Analysis — Customer feedback text analyzed in Power Query Editor for tone classification
+Deployment — Published to Power BI Service workspace with Scheduled Refresh configured
 
 
-📊 Dashboards
-Dashboard
-Key Visuals
-Rainfall Analysis
-Regional rainfall trends, seasonal patterns, anomaly detection
-Temperature Analysis
-Avg temperature by region, heat stress thresholds, YoY trends
-Humidity Analysis
-Humidity-yield correlation, monthly distribution
-Yield Analysis
-Crop output by region, climate-yield impact matrix, KPI cards
+📊 Dashboard Overview
+8 visuals across dedicated report pages:
+
+Visual
+Purpose
+KPI Cards
+Claims volume, approval rate, avg settlement time
+Ribbon Chart
+Segment performance trends over time
+Matrix
+Regional claims breakdown by category
+Drill-through Page
+Individual claim deep-dive by region/segment
+Donut Chart
+Claims distribution by policy type
+Sentiment Dashboard
+Positive/Neutral/Negative feedback breakdown
+Trend Line
+Customer satisfaction score over time
+Score Cards
+Net Promoter insights by region
 
 
 📸 Screenshot: (Add your Power BI dashboard screenshot here)
 
 
+🔐 Row-Level Security (RLS)
+Defined RLS roles in Power BI Desktop restricting data access by region
+Each regional manager sees only their territory's claims data
+Validated RLS post-deployment in Power BI Service using "View as role" feature
+Gateway-backed Scheduled Refresh keeps the live report in sync with source SQL Server
+
+
 🔍 Key Insights
-Regions with rainfall between 800–1200mm showed 23% higher average yield compared to lower rainfall zones
-Temperature spikes above 35°C during flowering season correlated with a significant yield drop across 3 major crop types
-Humidity levels above 75% during harvest months were associated with increased crop disease risk
+Region X had 28% higher claims volume than average — flagged for underwriting review
+Sentiment analysis revealed 34% of customer feedback was negative, with billing complaints as the top driver
+Average claim settlement time exceeded SLA by 12 days in Q2 — surfaced via KPI card alert
 
 
 📁 Project Structure
-agriculture-climate-yield-analytics/
+prism-insurance-bi-sentiment/
 
 │
 
-├── data/                  # Sample/raw dataset (anonymized)
+├── data/                  # Sample anonymized dataset
 
-├── sql/                   # Snowflake SQL scripts (wrangling, feature engineering)
+├── sql/                   # SQL Server query scripts
 
 ├── powerbi/               # Power BI .pbix file
 
@@ -80,9 +99,9 @@ agriculture-climate-yield-analytics/
 
 
 💡 Business Impact
-This solution enables agricultural planners to shift from manual, spreadsheet-based reporting to a real-time, self-serve analytics platform — reducing data-to-insight time and supporting proactive, climate-aware crop planning decisions.
+This solution consolidates fragmented claims data and customer feedback into a single secure BI platform — enabling regional managers to monitor exposure in real time and the CX team to prioritize complaint resolution based on sentiment trends, rather than manual feedback review.
 
 
 👤 Author
-Dnyaneshwar Singh MSc Computer Applications | Mit ACSC Pune LinkedIn | GitHub
+Dnyaneshwar Singh MSc Computer Applications | MIT ACSC Pune LinkedIn | GitHub
 
