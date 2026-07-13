@@ -116,5 +116,5 @@ This solution replaces static, delayed market reports with a live cloud-connecte
 
 
 👤 Author
-Dnyaneshwar Singh MSc Computer Applications | MES IMCC Pune LinkedIn | GitHub
+Dnyaneshwar Singh MSc Computer Applications | MIT ACSC Pune LinkedIn | GitHub
 
