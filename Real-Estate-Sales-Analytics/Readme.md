@@ -95,22 +95,6 @@ The Key Influencers visual identified property size and proximity to transit as 
 Rolling 12-month analysis revealed Q3 as the peak sales season — accounting for 34% of annual transaction volume
 
 
-📁 Project Structure
-real-estate-sales-analytics/
-
-│
-
-├── sql/                   # BigQuery SQL exploration scripts
-
-├── powerbi/               # Power BI .pbix file
-
-├── dax/                   # DAX measure documentation
-
-├── screenshots/           # Dashboard screenshots
-
-└── README.md
-
-
 💡 Business Impact
 This solution replaces static, delayed market reports with a live cloud-connected analytics platform — giving real estate analysts and investors self-serve access to pricing trends, regional comparisons, and AI-driven market insights for faster, more confident investment decisions.
 
