@@ -85,30 +85,6 @@ Top 3 churn drivers identified: contract type, tenure, and monthly charge level
 Customers who churned had X% higher average monthly charges than retained customers
 
 
-📁 Project Structure
-customer-churn-analysis/
-
-│
-
-├── data/
-
-│   └── churn_data.db          # SQLite database
-
-├── notebooks/
-
-│   └── churn_analysis.ipynb   # Main Jupyter Notebook
-
-├── visualizations/
-
-│   └── *.png                  # Exported charts
-
-├── insights/
-
-│   └── churn_insights.pptx    # PowerPoint summary
-
-└── README.md
-
-
 📋 How to Run
 # 1. Clone the repository
 
