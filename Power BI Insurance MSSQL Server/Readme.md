@@ -82,21 +82,6 @@ Sentiment analysis revealed 34% of customer feedback was negative, with billing 
 Average claim settlement time exceeded SLA by 12 days in Q2 — surfaced via KPI card alert
 
 
-📁 Project Structure
-prism-insurance-bi-sentiment/
-
-│
-
-├── data/                  # Sample anonymized dataset
-
-├── sql/                   # SQL Server query scripts
-
-├── powerbi/               # Power BI .pbix file
-
-├── screenshots/           # Dashboard screenshots
-
-└── README.md
-
 
 💡 Business Impact
 This solution consolidates fragmented claims data and customer feedback into a single secure BI platform — enabling regional managers to monitor exposure in real time and the CX team to prioritize complaint resolution based on sentiment trends, rather than manual feedback review.
