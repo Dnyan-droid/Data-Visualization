@@ -63,22 +63,6 @@ Temperature spikes above 35°C during flowering season correlated with a signifi
 Humidity levels above 75% during harvest months were associated with increased crop disease risk
 
 
-📁 Project Structure
-agriculture-climate-yield-analytics/
-
-│
-
-├── data/                  # Sample/raw dataset (anonymized)
-
-├── sql/                   # Snowflake SQL scripts (wrangling, feature engineering)
-
-├── powerbi/               # Power BI .pbix file
-
-├── screenshots/           # Dashboard screenshots
-
-└── README.md
-
-
 💡 Business Impact
 This solution enables agricultural planners to shift from manual, spreadsheet-based reporting to a real-time, self-serve analytics platform — reducing data-to-insight time and supporting proactive, climate-aware crop planning decisions.
 
